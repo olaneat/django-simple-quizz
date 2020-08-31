@@ -29,3 +29,13 @@ class Choice(models.Model):
     class Meta:
         verbose_name = 'Choice'
         verbose_name_plural = "Choice"
+
+class Response(models.Model):
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    choice = models.ForeignKey(Choice, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.question.label
+     
+
+
