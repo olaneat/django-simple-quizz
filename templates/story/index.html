@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+{% extends 'base.html' %}
+  {% block content %}
+    <div class="instruction">
+      <h1>Welcome</h1><br>
+      <h3>Kindly go through these basic guideline on how to proceed with your quizz</h3>
+      <ul>
+        <li>Read the article carefully and answer the questions that follows </li>
+        <li>Each question carrys 5 marks each</li>
+        <li>You will have 30minutes to answer all these questions after which the quizz will be submited</li>
+        <li>they pass mark for the quizz is 75%</li>
+      </ul>
+    </div>
+    <div class="title">
+      {% for story in stories  %}
+        <p>kindly click on the link below to proceed </p> <h4> <a href="{{story.get_absolute_url}}">{{story.title}}</a></h4>
+      {% endfor %}
+    </div>
+  {% endblock content %}
+</html>

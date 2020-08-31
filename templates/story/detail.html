@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  {% extends 'base.html' %}
+  <head>
+    <title>Article Detail Page</title>
+    <meta charset="utf-8"> 
+  </head> 
+    {% block content %}
+      <div class="title">
+        <h1>{{story.title}}</h1>
+      </div>
+      <div class="description">
+        <p>{{story.body}}</p>
+      </div>
+      <div class="button">
+        <a href="{% url 'question:home' %}" >take Quizz</a>
+      </div>
+    {% endblock content %}
+ 
+  
+</html>
