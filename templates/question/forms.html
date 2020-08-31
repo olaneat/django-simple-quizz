@@ -5,24 +5,24 @@
     <div class="test-timer">
       <h2 id="timer"></h2>
     </div>
-    <form method="post" action="">
-    {% csrf_token %}
-    <ul>
-      {% for question  in questions  %}
-        <li>
-        {{now}}
-          {% if question %}
-            <p>{{question.label}}</p>
-            {% for c in question.choice_set.all  %}<br>
-              <input type="radio" name="{{question.label}}" id="choice{{forloop.counter}}" value="{{c.choice_text}}">
-              <label for="choice{{questtion.forloop.counter}}">{{c.choice_text}}</label>
-            {% endfor %}      
-          {% endif %}
-        </li>
-      {% endfor %}
-    <ul>
-    <button id="url" type="submit"><a href="{% url 'question:finalResul' %}">Submit</a></button>
-        
+    <form method="post" action="{% url 'question:finalResult' %}">
+      
+      {% csrf_token %}
+      <ul>
+        {% for question  in questions  %}
+          <li>
+         
+            {% if question %}
+              <p>{{question.label}}</p>
+              {% for c in question.choice_set.all  %}<br>
+                <input type="radio" name="choice_{{ question.id }}" id="choice{{forloop.counter}}" value="{{c.choice_text}}">
+                <label for="choice{{questtion.forloop.counter}}">{{c.choice_text}}</label>
+              {% endfor %}      
+            {% endif %}
+          </li>
+        {% endfor %}
+      <ul>
+      <button id="url" type="submit">submit</button>
     </form>
   {% endblock content %}
 
