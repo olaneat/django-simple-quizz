@@ -17,7 +17,7 @@ SECRET_KEY = '%b+w4q+hqjb#=lw(g*)^3o+(-%ot+hx5$nw$s(-cq+y@$n3til'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dhope-quizz.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
