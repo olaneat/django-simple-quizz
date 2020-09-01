@@ -1,0 +1,28 @@
+li {
+    list-style: none;
+    margin: 10px;
+}
+
+input {
+    margin: 7px;
+}
+
+.test-timer {
+    margin: auto;
+    padding: 10px;
+    font-size: 2em;
+}
+
+li p {
+    font-weight: 500;
+    font-size: 1.1em;
+    font-style: oblique;
+}
+
+button {
+    background-color: #01ff01;
+    color: blanchedalmond;
+    padding: 10px;
+    font-weight: 600;
+    float: right;
+}
