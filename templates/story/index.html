@@ -8,13 +8,13 @@
       <ul>
         <li>Read the article carefully and answer the questions that follows </li>
         <li>Each question carrys 5 marks each</li>
-        <li>You will have 30minutes to answer all these questions after which the quizz will be submited</li>
+        <li>You will have 7minutes to answer all these questions after which the quizz will be submited</li>
         <li>they pass mark for the quizz is 75%</li>
       </ul>
     </div>
     <div class="title">
       {% for story in stories  %}
-        <p>kindly click on the link below to proceed </p> <h4> <a href="{{story.get_absolute_url}}">{{story.title}}</a></h4>
+        <p>kindly click on the link below to proceed </p> <h3> <a href="{{story.get_absolute_url}}">{{story.title}}</a></h3>
       {% endfor %}
     </div>
   {% endblock content %}

@@ -1,4 +1,4 @@
-document.getElementById('timer').innerHTML = 2 + ":" + 00;
+document.getElementById('timer').innerHTML = 7 + ":" + 00;
 startTimer();
 
 function startTimer() {
@@ -7,7 +7,7 @@ function startTimer() {
     var m = timeArray[0];
     var s = checkSecond((timeArray[1] - 1));
     if (s == 59) { m = m - 1 }
-    let finlUrl = document.getElementById('url').innerHTML;
+    let finlUrl = document.getElementsByTagName('action');
     if (s == 00 && m == 00) {
         window.location.href = finlUrl
     }

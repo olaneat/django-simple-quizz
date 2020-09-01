@@ -3,9 +3,11 @@
 <div class="form-detail">
   {% block content %}
     <div class="test-timer">
-      <h2 id="timer"></h2>
+      <span><p>your time expires in:</></span>
+      <h2 id="timer">
+      </h2>
     </div>
-    <form method="post" action="{% url 'question:finalResult' %}">
+    <form method="post" id="quizzForm" action="{% url 'question:finalResult' %}">
       
       {% csrf_token %}
       <ul>
